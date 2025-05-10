@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.107
+
+- CLAUDE.md files can now import other files. Add @path/to/file.md to ./CLAUDE.md to load additional files on launch
+
+## 0.2.106
+
+- MCP SSE server configs can now specify custom headers
+- Fixed a bug where MCP permission prompt didn't always show correctly
+
 ## 0.2.105
 
 - Claude can now search the web
