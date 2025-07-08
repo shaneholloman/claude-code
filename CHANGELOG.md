@@ -1,5 +1,50 @@
 # Changelog
 
+## 1.0.44
+
+- New /export command lets you quickly export a conversation for sharing
+- MCP: resource_link tool results are now supported
+- MCP: tool annotations and tool titles now display in /mcp view
+- Changed Ctrl+Z to suspend Claude Code. Resume by running `fg`. Prompt input undo is now Ctrl+U.
+
+## 1.0.43
+
+- Fixed a bug where the theme selector was saving excessively
+- Hooks: Added EPIPE system error handling
+
+## 1.0.42
+
+- Added tilde (`~`) expansion support to `/add-dir` command
+
+## 1.0.41
+
+- Hooks: Split Stop hook triggering into Stop and SubagentStop
+- Hooks: Enabled optional timeout configuration for each command
+- Hooks: Added "hook_event_name" to hook input
+- Fixed a bug where MCP tools would display twice in tool list
+- New tool parameters JSON for Bash tool in `tool_decision` event
+
+## 1.0.40
+
+- Fixed a bug causing API connection errors with UNABLE_TO_GET_ISSUER_CERT_LOCALLY if `NODE_EXTRA_CA_CERTS` was set
+
+## 1.0.39
+
+- New Active Time metric in OpenTelemetry logging
+
+## 1.0.38
+
+- Released hooks. Special thanks to community input in https://github.com/anthropics/claude-code/issues/712. Docs: https://docs.anthropic.com/en/docs/claude-code/hooks
+
+## 1.0.37
+
+- Remove ability to set `Proxy-Authorization` header via ANTHROPIC_AUTH_TOKEN or apiKeyHelper
+
+## 1.0.36
+
+- Web search now takes today's date into context
+- Fixed a bug where stdio MCP servers were not terminating properly on exit
+
 ## 1.0.35
 
 - Added support for MCP OAuth Authorization Server discovery
@@ -11,7 +56,7 @@
 ## 1.0.33
 
 - Improved logging functionality with session ID support
-- Added undo functionality (Ctrl+Z and vim 'u' command)
+- Added prompt input undo functionality (Ctrl+Z and vim 'u' command)
 - Improvements to plan mode
 
 ## 1.0.32
