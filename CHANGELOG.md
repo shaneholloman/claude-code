@@ -1,8 +1,46 @@
 # Changelog
 
+## 1.0.65
+
+- IDE: Fixed connection stability issues and error handling for diagnostics
+- Windows: Fixed shell environment setup for users without .bashrc files
+
+## 1.0.64
+
+- Agents: Added model customization support - you can now specify which model an agent should use
+- Agents: Fixed unintended access to the recursive agent tool
+- Hooks: Added systemMessage field to hook JSON output for displaying warnings and context
+- SDK: Fixed user input tracking across multi-turn conversations
+- Added hidden files to file search and @-mention suggestions
+
+## 1.0.63
+
+- Windows: Fixed file search, @agent mentions, and custom slash commands functionality
+
+## 1.0.62
+
+- Added @-mention support with typeahead for custom agents. @<your-custom-agent> to invoke it
+- Hooks: Added SessionStart hook for new session initialization
+- /add-dir command now supports typeahead for directory paths
+- Improved network connectivity check reliability
+
+## 1.0.61
+
+- Transcript mode (Ctrl+R): Changed Esc to exit transcript mode rather than interrupt
+- Settings: Added `--settings` flag to load settings from a JSON file
+- Settings: Fixed resolution of settings files paths that are symlinks
+- OTEL: Fixed reporting of wrong organization after authentication changes
+- Slash commands: Fixed permissions checking for allowed-tools with Bash
+- IDE: Added support for pasting images in VSCode MacOS using ⌘+V
+- IDE: Added `CLAUDE_CODE_AUTO_CONNECT_IDE=false` for disabling IDE auto-connection
+- Added `CLAUDE_CODE_SHELL_PREFIX` for wrapping Claude and user-provided shell commands run by Claude Code
+
+## 1.0.60
+
+- You can now create custom subagents for specialized tasks! Run /agents to get started
+
 ## 1.0.59
 
-- Rename CLAUDE_CODE_BASH_PREFIX to CLAUDE_CODE_SHELL_PREFIX
 - SDK: Added tool confirmation support with canUseTool callback
 - SDK: Allow specifying env for spawned process
 - Hooks: Exposed PermissionDecision to hooks (including "ask")
